@@ -10,6 +10,7 @@ type Persona = {
 type AuthContextType = {
     persona: Persona | undefined;
     signInWithGoogle: () => Promise<void>;
+    signOut: () => Promise<void>;
 }
 
 type AuthContextProviderProps = {
@@ -60,8 +61,13 @@ export function AuthContextProvider({ children }: AuthContextProviderProps) {
         }
     }
 
+    async function signOut() {
+        await auth.signOut();
+        setPersona(undefined);
+    }
+
     return (
-        <AuthContext.Provider value={{ persona, signInWithGoogle }}>
+        <AuthContext.Provider value={{ persona, signInWithGoogle, signOut }}>
             {children}
         </AuthContext.Provider>
     );

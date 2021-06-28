@@ -1,11 +1,16 @@
 #page-auth {
-    display: flex;
-    align-items: stretch;
-    height: 100vh;
-    aside {
+  display: flex;
+  align-items: stretch;
+  height: 100vh;
+
+  &.Dark {
+    background: #141414;
+    color: #281d4b;
+
+    > aside {
       flex: 7;
-      background: #835afd;
-      color: #ffffff;
+      background: #141414;
+      color: #3f3f3f;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -24,17 +29,18 @@
         font-size: 24px;
         line-height: 32px;
         margin-top: 16px;
-        color: #f8f8f8;
+        color: #3f3f3f;
       }
     }
-    main {
+    
+    > main {
       flex: 8;
       padding: 0 32px;
       display: flex;
       align-items: center;
       justify-content: center;
     }
-  
+
     .main-content {
       display: flex;
       flex-direction: column;
@@ -46,7 +52,7 @@
       > img {
         align-self: center;
       }
-
+  
       h2 {
         font-size: 24px;
         margin: 64px 0 24px;
@@ -58,22 +64,25 @@
           height: 58px;
           border-radius: 8px;
           padding: 0 16px;
-          background: #ffffff;
-          border: 1px solid #a8a8b3;
+          color: #3f3f3f;
+          background: #141414;
+          border: 1px solid #19191a;
         }
         button {
           margin-top: 20px;
+          
         }
         button, input {
           width: 100%;
+          border: 1px solid #3f3f3f;
         }
       }
-
+  
       p {
         font-size: 14px;
-        color: #737380;
+        color: #3f3f3f;
         margin-top: 16px;
-
+  
         a {
           color: #e559f9;
         }
@@ -82,15 +91,15 @@
     .create-room {
       margin-top: 64px;
       height: 50px;
+      border: 1px solid #3f3f3f;
       border-radius: 8px;
       font-weight: 500px;
-      background: #ea4335;
-      color: #ffffff;
+      background: #141414;
+      color: #3f3f3f;
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      border: 0;
       transition: filter 0.4s ease-in-out;
   
       img {
@@ -98,13 +107,14 @@
       }
   
       &:hover {
-        filter: brightness(0.8);
+        filter: brightness(0.9);
       }
   
     }
+    
     .separator {
       font-size: 14px;
-      color: a8a8b3;
+      color: #3f3f3f;
       margin: 32px 0;
       display: flex;
       align-items: center;
@@ -115,7 +125,7 @@
         content: "";
         flex: 1;
         height: 1px;
-        background-color: #a8a8b3;
+        background-color: #3f3f3f;
         margin-right: 16px;
       }
   
@@ -125,3 +135,129 @@
       }
     }
   }
+
+  aside {
+    flex: 7;
+    background: #835afd;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 120px 80px;
+
+    img {
+      max-width: 320px;
+    }
+    strong {
+      font: 700 36px 'Poppins', sans-serif;
+      line-height: 42px;
+      margin-top: 16px;
+    }
+
+    p {
+      font-size: 24px;
+      line-height: 32px;
+      margin-top: 16px;
+      color: #f8f8f8;
+    }
+  }
+  main {
+    flex: 8;
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 340px;
+    align-items: stretch;
+    text-align: center;
+
+    > img {
+      align-self: center;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin: 64px 0 24px;
+      font-family: 'Poppins', sans-serif; 
+    }
+
+    form {
+      input {
+        height: 58px;
+        border-radius: 8px;
+        padding: 0 16px;
+        background: #ffffff;
+        border: 1px solid #a8a8b3;
+      }
+      button {
+        margin-top: 20px;
+        
+      }
+      button, input {
+        width: 100%;
+        border: 1px solid #a8a8b3;
+      }
+    }
+
+    p {
+      font-size: 14px;
+      color: #a8a8b3;
+      margin-top: 16px;
+
+      a {
+        color: #e559f9;
+      }
+    }
+  }
+  .create-room {
+    margin-top: 64px;
+    height: 50px;
+    border: 1px solid #a8a8b3;
+    border-radius: 8px;
+    font-weight: 500px;
+    background: #ffffff;
+    color: #a8a8b3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: filter 0.4s ease-in-out;
+
+    img {
+      margin-right: 8px;
+    }
+
+    &:hover {
+      filter: brightness(0.9);
+    }
+
+  }
+  .separator {
+    font-size: 14px;
+    color: #a8a8b3;
+    margin: 32px 0;
+    display: flex;
+    align-items: center;
+
+
+    &::before,
+    &::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background-color: #a8a8b3;
+      margin-right: 16px;
+    }
+
+    &::after {
+      margin-right: 0;
+      margin-left: 16px;
+    }
+  }
+}  

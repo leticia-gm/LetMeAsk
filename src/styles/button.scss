@@ -1,5 +1,5 @@
 .button {
-    margin-top: 64px;
+    margin-top: 10px;
     height: 50px;
     border-radius: 8px;
     font-weight: 500px;
@@ -12,9 +12,20 @@
     cursor: pointer;
     border: 0;
     transition: filter 0.4s ease-in-out;
-  
+
+    svg {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+ 
     img {
       margin-right: 8px;
+    }
+
+    &.outlined {
+      background-color: #fff;
+      border: 1px solid #835afd;
+      color: #835afd;
     }
   
     &:not(:disabled):hover {
