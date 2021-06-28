@@ -1,11 +1,4 @@
 ## Event: NLW Together / Rocketseat
-
-<h1 align="center">
-  <a href="https://github.com/leticia-gm/LetMeAsk">
-    <img alt="Let Me Ask" src="https://github.com/leticia-gm/LetMeAsk/public/assets/logo.png" width="50%" />
-  </a>
-</h1>
-
 ## LetMeAsk 
 
 <h3>About</h3>
